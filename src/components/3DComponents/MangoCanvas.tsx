@@ -6,7 +6,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
-useGLTF.preload('/fruits.glb');
+useGLTF.preload('/fruits-v4.glb');
 
 let cachedTexture: THREE.Texture | null = null;
 
