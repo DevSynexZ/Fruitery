@@ -3,8 +3,16 @@ import React from 'react';
 import Link from 'next/link';
 import { Leaf, Apple, Carrot, Citrus, Cherry, ShoppingBag, Search, User } from 'lucide-react';
 
+// const categories = [
+//   { name: 'All Products', icon: Leaf, href: '/' },
+//   { name: 'Fresh Fruits', icon: Apple, href: '/category/fruits' },
+//   { name: 'Organic Veggies', icon: Carrot, href: '/category/vegetables' },
+//   { name: 'Citrus & Berries', icon: Citrus, href: '/category/citrus' },
+//   { name: 'Exotics', icon: Cherry, href: '/category/exotics' },
+// ];
+
 const categories = [
-  { name: 'All Products', icon: Leaf, href: '/' },
+  { name: 'All Products', icon: Leaf, href: '/shop' },
   { name: 'Fresh Fruits', icon: Apple, href: '/category/fruits' },
   { name: 'Organic Veggies', icon: Carrot, href: '/category/vegetables' },
   { name: 'Citrus & Berries', icon: Citrus, href: '/category/citrus' },

@@ -3,9 +3,14 @@ import connectDB from '@/lib/db';
 import Product from '@/models/Product';
 
 // GET: Fetch all products from MongoDB
-export async function GET() {
+export async function GET(req: Request) {
   try {
     await connectDB();
+    const {searchParams} = new URL(req.url);
+    const category = searchParams.get('category');
+
+    const filter = category ? { category: { $regex: new RegExp(`^${category}$`, 'i') } } : {};
+    
     const products = await Product.find({}).lean();
 
     // Convert MongoDB ObjectIds to strings so Next.js can serialize them safely
