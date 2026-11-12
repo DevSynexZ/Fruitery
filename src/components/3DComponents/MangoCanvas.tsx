@@ -43,7 +43,7 @@ function Model({ scrollProgress }: ModelProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const modelRef = useRef<THREE.Group>(null);
 
-  const { scene } = useGLTF('/fruits.glb');
+  const { scene } = useGLTF('/fruits-v4.glb');
 
   useEffect(() => {
     if (scene) {
